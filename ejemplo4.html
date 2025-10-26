@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cambiarFondo() {
+
+            const sections = document.querySelectorAll('.zona');
+
+            if (sections.length === 0) return;
+
+
+            const colorActual = sections[0].style.backgroundColor;
+
+            const nuevoColor = (colorActual === 'coral') ? '' : 'coral';
+
+            sections.forEach(seccion => {
+                seccion.style.backgroundColor = nuevoColor;
+            });
+        }
+
+        function color(color) {
+            document.bgColor = color;
+        }
+    </script>
+    <style>
+        input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "Quicksand", sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input:hover {
+            background-color: #45a049;
+        }
+
+        #image {
+            justify-content: center;
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .zona {
+            text-align: center;
+            font-family: "Quicksand", system-ui;
+            font-size: 20px;
+            color: black;
+            margin-left: 500px;
+            margin-right: 500px;
+            padding: 10px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            font-family: "Quicksand", sans-serif;
+            width: 150px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b3a3c;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a:hover {
+            background-color: #939393;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">VolvamosPorFavor😭</a>
+    <div style="background-color: blue;" onmouseover="color('blue')">
+        <section class="zona">
+            <h2>Que</h2>
+        </section>
+        <section class="zona">
+            <h2>Viva</h2>
+        </section>
+        <section class="zona">
+            <h2>Jenny Rivera</h2>
+        </section>
+    </div>
+    <input type="button" value="Fondo" onclick="cambiarFondo();">
+    <img id="image" src="../Images/Jenny.jpg" alt="">
+</body>
+
+</html>

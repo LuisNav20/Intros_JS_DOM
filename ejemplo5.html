@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <script>
+        let contador = 0; //Esta variable nos sirve para inicializar el contador
+        function aumento() {
+            contador++; //Incrementa el contador en 1 cada vez que se presiona el botón
+            document.getElementById('contador').innerText = "Número de clicks: " + contador; //Actualiza el texto del párrafo con el nuevo valor del contador
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Quicksand", sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: rgb(179, 209, 219);
+        }
+
+        h1 {
+            font-family: "Fascinate", system-ui;
+            color: rgb(72, 78, 83);
+            font-size: 48px;
+        }
+
+        input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input:hover {
+            background-color: #45a049;
+        }
+        #image{
+            justify-content: center;
+            display: block;
+            margin: 20px auto;
+            width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-family: "Quicksand", sans-serif;
+            width: 150px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b3a3c;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a:hover{
+            background-color: #939393;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">VolvamosPorFavor😭</a>
+    <h1>Contador de clicks</h1>
+    <input type="button" value="Presioname :D" onclick="aumento()">
+    <p id="contador">Número de clicks: 0</p> <!--Párrafo en el que se muestra el aumento-->
+    <img id="image"  src="../Images/java.webp" alt="">
+</body>
+
+</html>

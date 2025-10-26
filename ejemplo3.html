@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen</title>
+    <script>
+        let cambiado=false;
+        function magic(){
+            const imagen=document.querySelector('.zona');
+
+            if(!cambiado){
+                imagen.src='../Images/perdida.jpg';
+                cambiado=true;
+            }else{
+                imagen.src='';
+                cambiado=false;
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(179, 209, 219);
+        }
+         input[type="button"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "Quicksand", sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        .zona {
+            justify-content: center;
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-family: "Quicksand", sans-serif;
+            width: 150px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b3a3c;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        a:hover{
+            background-color: #939393;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <a href="index.html">VolvamosPorFavor😭</a>
+        <img class="zona" src="" alt="">
+    </section>
+    <input type="button" value="presioname :D" onclick="magic();">
+</body>
+</html>

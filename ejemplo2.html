@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambioDeColor</title>
+    <script>
+        function cambiarColor(){
+            const elementos= document.getElementsByClassName('nota');
+
+            const nuevoColor = 'aliceblue';
+            const colorOriginal = 'black';
+
+            for(i=0;i<elementos.length;i++){
+
+                if (elementos[i].style.color == 'aliceblue') {
+                    elementos[i].style.color = colorOriginal;
+                } else {
+                    elementos[i].style.color = nuevoColor;
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(179, 209, 219);
+        }
+        .nota {
+            font-family: "Quicksand", sans-serif;
+            text-align: center;
+            font-size: 25px;
+        }
+         input[type="button"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "Quicksand", sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #image {
+            justify-content: center;
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-family: "Quicksand", sans-serif;
+            width: 150px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b3a3c;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        a:hover{
+            background-color: #939393;
+            color: black;
+        }
+        section{
+            
+            margin-left: 450px;
+            margin-right: 450px;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 8px solid purple;
+            background-color: rgb(145, 123, 161);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">VolvamosPorFavor😭</a>
+    <section>
+    <p class="nota">!!!Ayuda</p>
+    <p class="nota">Ya</p>
+    <p class="nota">Ocupamos</p>
+    <p class="nota">Vacaciones</p>
+    <p class="nota">AHHHHHH¡¡¡¡</p>
+    </section>
+    <input type="button" value="presioname :D" onclick="cambiarColor()">
+    <img id="image" src="../Images/ejemplo2.jpg" alt="QusieraSalirmeDeAqui">
+</body>
+</html>

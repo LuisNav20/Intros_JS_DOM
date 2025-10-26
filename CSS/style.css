@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(179, 209, 219);
+}
+#titulo{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Fascinate", system-ui;
+    font-size: 40px;
+    color: aliceblue;
+}

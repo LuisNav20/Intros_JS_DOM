@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <script>
+        // Variable que indica si la página está cambiada o no
+        let cambiado = false;
+
+        function cambiarTitulo() {
+            const titulo = document.getElementById('titulo');
+            const imagen = document.getElementById('image');
+
+            if (!cambiado) {
+                //true
+                titulo.innerText = 'Hello Starshine the Earth Says Hello~';
+                imagen.src = '../Images/goodMorning.jpg';
+                imagen.style.display = 'block';
+                cambiado = true;
+            } else {
+                //false
+                titulo.innerText = 'Página original';
+                imagen.style.display = 'none';
+                imagen.src = '';
+                cambiado = false;
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(179, 209, 219);
+        }
+
+        #titulo {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Fascinate", system-ui;
+            font-size: 40px;
+            color: aliceblue;
+        }
+
+        input{
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "Quicksand", sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #image {
+            display: none;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-family: "Quicksand", sans-serif;
+            width: 140px;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #2b3a3c;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+        }
+        a:hover{
+            background-color: #939393;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">VolvamosPorFavor😭</a>
+    <h1 id="titulo">Página original</h1>
+    <input type="button" value="presioname :D" onclick="cambiarTitulo()">
+    <img id="image" src="" alt="img">
+</body>
+</html>
